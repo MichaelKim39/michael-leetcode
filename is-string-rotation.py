@@ -9,11 +9,10 @@ rotations =
 """
 
 
-def is_string_rotation(str1: str, str2: str) -> bool:
-    if len(str1) != len(str2):
+def is_string_rotation(s1: str, s2: str) -> bool:
+    if len(s1) != len(s2):
         return False
-
-    return str1 in str2 * 2
+    return (s1 in s2*2)
 
 
 assert is_string_rotation('abcd', 'dabc')
