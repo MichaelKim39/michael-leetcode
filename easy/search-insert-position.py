@@ -19,17 +19,16 @@ from typing import List
 
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        def binSearch(left, right):
-            left, right = 0, len(nums)-1
+        left, right = 0, len(nums)-1
 
-            while left < right:
-                mid = (left + right) // 2
-                if target > nums[mid]:
-                    left += 1
-                else:
-                    right = mid
+        while left < right:
+            mid = (left + right) // 2
+            if target > nums[mid]:
+                left += 1
+            else:
+                right = mid
 
-            return right
+        return right
 
 
 sol = Solution()
